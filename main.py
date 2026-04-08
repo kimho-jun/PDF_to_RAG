@@ -75,16 +75,16 @@ VLM_processor = AutoProcessor.from_pretrained(vlm_model_ckpt)
 
 ############################################
 
-
+# size, overlap_size는 DB 구축하면서 사용한 크기 그대로 사용
 text_db = Chroma(
     collection_name='langchain',
-    persist_directory="VectorDB_300_100/",
+    persist_directory="VectorDB_{size}_{overlap_size}/",
     embedding_function=langchain_embeddings
 )
 
 image_db = Chroma(
     collection_name='image_collection',
-    persist_directory="VectorDB_300_100/",
+    persist_directory="VectorDB_{size}_{overlap_size}/",
     embedding_function=None
 )
 
