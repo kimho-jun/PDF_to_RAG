@@ -69,7 +69,7 @@ pdf = fitz.open(path)
 
 ############################################################################################
 
-# 출처로 활용하기 위해 목차(1.xxx or 2.xxx ...) 추출 코드
+# 파일 내 해당 페이지에서 다루는 섹션을 딕셔너리 형태로 반환
 toc_page = pdf[1]
 blocks = toc_page.get_text('blocks')
 blocks.sort(key = lambda b: b[1])
@@ -161,6 +161,8 @@ def extract_text_with_global_context(pdf_path: str):
 contents = extract_text_with_global_context(path)
 
 
+#  파일마다 목차를 텍스트 컬러 또는 사이즈로 구분할 수 있으니 사용하는 PDF 참고하여 작성
+#  아래 메서드는 폰트 사이즈로 구분
 def make_chunk_per_page(contents, section_font_size):
     chunks = []
     current_chunk_text = []
@@ -229,10 +231,13 @@ for item in section_chunks:
         }
     ))
 
+
+# size ->  청크 크기
+# overlap_size -> 문맥 보존 위해 중복 허용 크기(보통 청크 크기의 10~25%)
 # 구분자를 반복적으로 순회하며 청크를 분리하는 재귀분리기 사용
 text_splitter = RecursiveCharacterTextSplitter(
-    chunk_size=300,  # char 기준
-    chunk_overlap=100,   
+    chunk_size = size,  # size -> chunk_size
+    chunk_overlap = overlap_size,   # overlap_length
     separators=[". ", "? ", "! ", " ", ""]
 )
 
@@ -332,7 +337,7 @@ embed, metas = image_to_vectorDB(image_docs)
 
 image_db = Chroma(
     collection_name='image_collection',
-    persist_directory="./VectorDB_300_100",
+    persist_directory="./VectorDB_{size}_{overlap_size}",
     embedding_function=None
 )
 
@@ -361,7 +366,7 @@ if __name__ == "__main__":
     print("RAG DataBase 구축 완료!")
     print("="*50)
 
-    print(f"저장 경로: {os.path.abspath('./VectorDB_300_100')}")
+    print(f"저장 경로: {os.path.abspath('./VectorDB_{size}_{overlap_size}')}")
     print(f"텍스트 청크 수: {len(split_docs)} 개")
     print(f"이미지 임베딩 수: {total_images} 개")
     print("-"*50)
