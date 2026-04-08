@@ -67,5 +67,8 @@ PDF 사용하여 민원 RAG 시스템 구축
 ---
 
 ## 3. 구현 RAG 사용 결과
-- <img width="992" height="226" alt="스크린샷 2026-03-28 012343" src="https://github.com/user-attachments/assets/d5c9362b-8ff2-43ec-8771-b902934f1bbb" />
+- `질문: PC에서 사용할 수 있는 간편인증 방법`
+- 답변 출력 결과
+    - <img width="992" height="226" alt="스크린샷 2026-03-28 012343" src="https://github.com/user-attachments/assets/d5c9362b-8ff2-43ec-8771-b902934f1bbb" />
+        - 답변에 대한 적절한 응답 + 유사한 이미지 설명 + 관련 목차, 출처 제공
 
