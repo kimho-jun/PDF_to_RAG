@@ -1,0 +1,23 @@
+--extra-index-url https://download.pytorch.org/whl/cu124
+torch==2.6.0
+torchvision==0.21.0
+torchaudio==2.6.0
+
+transformers==4.55.2
+sentence-transformers==5.1.0
+qwen-vl-utils==0.0.14
+accelerate
+
+langchain==0.3.27
+langchain-community==0.3.28
+langchain-huggingface==0.3.1
+langchain-chroma==0.2.5
+langchain-text-splitters
+
+PyMuPDF   
+Pillow     
+
+rank_bm25 
+pandas
+numpy
+tqdm
