@@ -8,16 +8,16 @@ PDF 사용하여 민원 RAG 시스템 구축
 <img width="1759" height="647" alt="pdf_to_rag_FW" src="https://github.com/user-attachments/assets/f34e5cad-f4ee-4387-84dc-9c75be815de8" />
 
 - **모델 체크포인트**
-    - Sentence Embedding :  jhgan/ko-sroberta-multitask
-    - CLIP : Bingsu/clip-vit-base-patch32-ko
-    - Re-Rank : dragonkue/bge-reranker-v2-m3-ko
-    - VLM:  Qwen/Qwen2-VL-7B-Instruct
+    - `Sentence Embedding` :  jhgan/ko-sroberta-multitask
+    - `CLIP` : Bingsu/clip-vit-base-patch32-ko
+    - `Re-Rank` : dragonkue/bge-reranker-v2-m3-ko
+    - `VLM` :  Qwen/Qwen2-VL-7B-Instruct
       
 - **프레임워크**
-    - Langchain
+    - `Langchain`
       
 - **벡터 데이터베이스**
-    - ChromaDB
+    - `ChromaDB`
 
 ---
 
