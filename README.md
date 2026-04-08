@@ -2,20 +2,20 @@
 PDF 사용하여 민원 RAG 시스템 구축
 
 
-
-# [관세청 민원 응답 시스템]  아키텍처 및 실험 과정
+# 아키텍처 및 실험 과정
 
 ## 1.  RAG 아키텍처
-
-![VEGAS_FW.png](attachment:9cd382cd-50d5-452d-bd8c-1bd9c156f733:VEGAS_FW.png)
+<img width="1759" height="647" alt="pdf_to_rag_FW" src="https://github.com/user-attachments/assets/f34e5cad-f4ee-4387-84dc-9c75be815de8" />
 
 - **모델 체크포인트**
     - Sentence Embedding :  jhgan/ko-sroberta-multitask
     - CLIP : Bingsu/clip-vit-base-patch32-ko
     - Re-Rank : dragonkue/bge-reranker-v2-m3-ko
     - VLM:  Qwen/Qwen2-VL-7B-Instruct
+      
 - **프레임워크**
     - Langchain
+      
 - **벡터 데이터베이스**
     - ChromaDB
 
@@ -65,11 +65,3 @@ PDF 사용하여 민원 RAG 시스템 구축
 - **Solution**
     - 텍스트 추출 대신 CLIP 모델을 통해 이미지의 시각적 특징을 벡터화하고, 원본 바이너리를 메타데이터에 직렬화하여 저장
     - 사용자 질문(Text)과 선별된 이미지 후보군(Vision)을 CLIP의 임베딩 공간에 함께 투사, 질문과 시각적 특징 간의  유사도를 계산하여 최적의 이미지 1개를 최종 매칭하여 VLM 모델 입력 데이터로 활용
-
----
-
-## 3.  실제 사용 예시
-
-Q : PC에서 사용할 수 있는 간편 인증 방법은?
-
-![image.png](attachment:54d269ee-138c-4b5c-bd81-05a787c48889:image.png)
