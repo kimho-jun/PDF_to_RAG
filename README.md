@@ -2,7 +2,7 @@
 PDF 사용하여 민원 RAG 시스템 구축
 
 
-## 1.  RAG 아키텍처
+## 1. RAG 아키텍처
 <img width="1759" height="647" alt="pdf_to_rag_FW" src="https://github.com/user-attachments/assets/f34e5cad-f4ee-4387-84dc-9c75be815de8" />
 
 - **모델 체크포인트**
@@ -70,5 +70,5 @@ PDF 사용하여 민원 RAG 시스템 구축
 - `질문: PC에서 사용할 수 있는 간편인증 방법`
 - 답변 출력 결과
   <img width="992" height="226" alt="스크린샷 2026-03-28 012343" src="https://github.com/user-attachments/assets/d5c9362b-8ff2-43ec-8771-b902934f1bbb" />
-   - 답변에 대한 적절한 응답 + 유사한 이미지 설명 + 관련 목차, 출처 제공
+   - 답변에 대한 적절한 응답 + CLIP으로 추출한 이미지 설명 + 관련 목차 & 근거 제공
 
