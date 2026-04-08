@@ -2,8 +2,6 @@
 PDF 사용하여 민원 RAG 시스템 구축
 
 
-# 아키텍처 및 실험 과정
-
 ## 1.  RAG 아키텍처
 <img width="1759" height="647" alt="pdf_to_rag_FW" src="https://github.com/user-attachments/assets/f34e5cad-f4ee-4387-84dc-9c75be815de8" />
 
