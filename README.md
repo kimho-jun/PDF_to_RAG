@@ -1,6 +1,6 @@
 # PDF_to_RAG
 PDF 사용하여 민원 RAG 시스템 구축
-
+- **데이터 출처**: https://share.google/Hur0WimR4lA6NcOcD
 
 ## 1. RAG 아키텍처
 <img width="1759" height="647" alt="pdf_to_rag_FW" src="https://github.com/user-attachments/assets/f34e5cad-f4ee-4387-84dc-9c75be815de8" />
@@ -79,12 +79,19 @@ PDF 사용하여 민원 RAG 시스템 구축
 ## 3. 구현 RAG 사용 결과
 - `질문: 개인통관고유부호는 모바일로 상시 발급 가능한가요? 그리고 신청 즉시 발급되나요?`
 - 답변 출력 결과
-      ![](Result_Image/Q1 result.png)
+     - ![](Result_Image/Q1 result.png)
      - 답변에 대한 적절한 응답 + CLIP으로 추출한 이미지 설명 + 관련 목차 & 근거 제공
 
   
 - `질문: "미수납 고지서 조회 방법 알려주세요."`
 - 답변 출력 결과
-      ![](Result_Image/Q2 result.png)
+     - ![](Result_Image/Q2 result.png)
      - 답변에 대한 적절한 응답 + CLIP으로 추출한 이미지 설명 + 관련 목차 & 근거 제공
 
+
+---
+
+## 4. 실행 순서
+- requirements.txt를 통해 필요한 라이브러리를 설치
+- build_db.py를 실행하여 벡터 DB를 생성
+- 생성된 벡터 DB를 기반으로 main.py를 실행
