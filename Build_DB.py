@@ -245,9 +245,7 @@ for i in tqdm(range(0, len(split_docs), batch_size), desc = 'Adding to Chroma'):
 #############
 
 
-path = "Data/UNIPASS_FAQ.pdf"
-
-def extract_images(path:str):
+def extract_images(pdf_path:str):
 
     doc = fitz.open(path)
     image_data_list = []
@@ -279,7 +277,7 @@ def extract_images(path:str):
                 
     return image_data_list
 
-image_docs = extract_images(pdf_path)
+image_docs = extract_images(path)
 
 
 def image_to_vectorDB(image_documents :list):
