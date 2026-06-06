@@ -78,12 +78,12 @@ PDF 사용하여 민원 RAG 시스템 구축
 
 ## 3. 구현 RAG 사용 결과
 - `질문: 개인통관고유부호는 모바일로 상시 발급 가능한가요? 그리고 신청 즉시 발급되나요?`
-   - ![답변](Result_Image/Q1 result.png)
+   - ![답변](Result_Image/Q1result.png)
    - 답변에 대한 적절한 응답 + CLIP으로 추출한 이미지 설명 + 관련 목차 & 근거 제공
 
   
 - `질문: "미수납 고지서 조회 방법 알려주세요."`
-   - ![답변](Result_Image/Q2 result.png)
+   - ![답변](Result_Image/Q2result.png)
    - 답변에 대한 적절한 응답 + CLIP으로 추출한 이미지 설명 + 관련 목차 & 근거 제공
 
 
