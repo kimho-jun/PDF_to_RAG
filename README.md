@@ -81,13 +81,13 @@ PDF 사용하여 민원 RAG 시스템 구축
 ### 질문 1
 `개인통관고유부호는 모바일로 상시 발급 가능한가요? 그리고 신청 즉시 발급되나요?`
 
-- ![답변](Result_Image/Q1 result.png)
+- ![](Result_Image/Q1_Result.png)
 
   
 ### 질문 2
 `미수납 고지서 조회 방법 알려주세요.`
 
-- ![답변](Result_Image/Q2 result.png)
+- ![](Result_Image/Q2_Result.png)
 
 
 ---
